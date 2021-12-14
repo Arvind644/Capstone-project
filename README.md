@@ -88,6 +88,6 @@ Details regarding input
     """
 ````
 ```
-![alt text](https://github.com/Arvind644/Capstone-project/blob/main/a.jpg?raw=true)
+![alt text](https://github.com/Arvind644/Capstone-project/blob/main/a.png?raw=true)
 
 ![Screenshot](a.png)
