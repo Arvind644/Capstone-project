@@ -8,7 +8,6 @@ We are making a house-price prediction model which tell the price of house
 
 In this project, we are predicting price of house. The model take variables and predict the price
 
-
 ## file structure
 
 notebook.ipynb - main jupyter noetbook <br />
@@ -50,7 +49,7 @@ ENTRYPOINT ["waitress-serve", "--listen=0.0.0.0:9696", "app:app"]
 ````
 This allows us to install python, run pipenv and its dependencies, run our predict script and our model itself and deploys our model using waitress. Similarly, you can just use the dockerfile in this repository.
 
-
+![Test Image 4](https://github.com/Arvind644/Capstone-project/blob/main/a.png)
 
 Details regarding input
 ````
@@ -91,4 +90,3 @@ Details regarding input
 ````
 ```
 
-![Test Image 4](https://github.com/Arvind644/Capstone-project/blob/main/a.png)
