@@ -50,6 +50,8 @@ ENTRYPOINT ["waitress-serve", "--listen=0.0.0.0:9696", "app:app"]
 ````
 This allows us to install python, run pipenv and its dependencies, run our predict script and our model itself and deploys our model using waitress. Similarly, you can just use the dockerfile in this repository.
 
+![Test Image 4](https://github.com/Arvind644/Capstone-project/blob/main/a.png)
+
 Details regarding input
 ````
 ```
