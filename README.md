@@ -1,20 +1,21 @@
 # Capstone-project
-# water quality prediction project
 
-We are making a water qualti prediction model which tell the quality of water
+# house-price prediction project
+
+We are making a house-price prediction model which tell the price of house
 
 ## Problem description
 
-In this project, we are predicting quality of water as it is suitable to drink or not. The model take variables and predict whether it is safe or note
+In this project, we are predicting price of house. The model take variables and predict the price
 
 
 ## file structure
 
 notebook.ipynb - main jupyter noetbook <br />
-model.py - contain extract and main model from jupyter noetbook.  <br />
-predict.py - it perdict the result. <br /> 
+app.py - contain extract and main model from jupyter noetbook.  <br />
+prediction_regression_project.py - it perdict the result. <br /> 
 predict-test.py - contain sample data <br /> 
-model_C.bin - it saveds the model. <br />
+best_model.pkl, poly.pkl, scalar.pkl - it saveds the model. <br />
 Dockerfile - to riun the application in docker image
 
 ## Deployment of model
@@ -36,20 +37,22 @@ RUN pip install pipenv
 
 WORKDIR /app
 
-COPY ["Pipfile", "Pipfile.lock", "./"]
+COPY ["Pipfile", "Pipfile.lock",  "./"]
 
 RUN pipenv install --system --deploy
 
-COPY ["predict.py", "catboostreg.bin", "./"]
+COPY ["prediction_regression_project.py", "best_model.pkl", "poly.pkl", "scalar.pkl", "./"]
 
 EXPOSE 9696
 
-ENTRYPOINT ["waitress-serve", "--listen=0.0.0.0:9696", "predict:app"]
+ENTRYPOINT ["waitress-serve", "--listen=0.0.0.0:9696", "app:app"]
 ```
 ````
 This allows us to install python, run pipenv and its dependencies, run our predict script and our model itself and deploys our model using waitress. Similarly, you can just use the dockerfile in this repository.
 
-
+Details regarding input
+````
+```
  """House Price Prediction
     Note: Only for houses with Latitude Ranging from: 24.93 - 24.97 , Longitude: 121.47 - 121.54
     ---
@@ -83,3 +86,5 @@ This allows us to install python, run pipenv and its dependencies, run our predi
           200:
               description: The output values
     """
+````
+```
