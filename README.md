@@ -89,3 +89,5 @@ Details regarding input
 ````
 ```
 ![alt text](https://github.com/Arvind644/Capstone-project/blob/main/a.jpg?raw=true)
+
+![Screenshot](a.png)
